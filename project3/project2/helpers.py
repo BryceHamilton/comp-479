@@ -61,16 +61,18 @@ def read_smg(file_paths):
             continue
         
         # open file
-        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+        f = open(file_path, 'r')
         
-            # read file
-            file_content = f.read() 
-            
-            # parse file number
-            file_name = file_path.split('.')[0]
-            file_num = file_name[-2:]
-            
-            yield file_num, file_content
+        # read file
+        file_content = f.read() 
+        
+        # parse file number
+        file_name = file_path.split('.')[0]
+        file_num = file_name[-2:]
+        
+        yield file_num, file_content
+
+        f.close()
 
 
 # STEP 1.1
@@ -114,7 +116,7 @@ def segment_documents(sgm_file):
         except:
             doc_no_body_count += 1
     
-    print(f'{doc_no_body_count} documents without body')
+    print(str(doc_no_body_count) + ' documents without body')
 
 # STEP 1.2
 def extract_html_symbols(document_str):

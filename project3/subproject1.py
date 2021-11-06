@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Project 3 - COMP 479
 Bryce Hamilton 40050171
@@ -5,7 +6,8 @@ Subproject 1
 
 run from command line: 
 `python subproject1`
-See output in command line and 'indexes/index_10000.json'
+Part A: See output in command line and results/subproject1
+Part B: see output index in 'indexes/index_10000.json'
 '''
 
 # -- IMPORTS --
@@ -61,7 +63,7 @@ def process_files(index, max_pairs):
             current_pairs += 1
             
             if current_pairs == max_pairs:
-                print(f'{max_pairs} processed')
+                print(str(max_pairs) + ' processed')
                 return
 
 
@@ -94,7 +96,7 @@ def output_doc_id_term_pairs(doc_stream):
         doc_count += 1
         doc = next(doc_stream, None)
 
-    print(f'{doc_count} documents processed')
+    print(str(doc_count) + ' documents processed')
 
 
 def spimi(max_pairs):
@@ -115,11 +117,32 @@ if __name__ == '__main__':
     n_index = naive_indexer(MAX_PAIRS)
     n_t1 = time.time()
 
-    print(f'number of tokens in SPIMI index: {len(SPIMI_index.keys())}')
+    results = ""
+
+    message = 'number of tokens in SPIMI index: ' + str(len(SPIMI_index.keys()))
+    print(message)
+    results += message
+    
     print('\n')
-    print(f'SPIMI took: {s_t1 - s_t0}' )
-    print(f'Naive took: {n_t1 - n_t0}' )
-    print(f'SPIMI is {(n_t1 - n_t0) / (s_t1 - s_t0)} times faster')
+    results += '\n'
+
+    message = 'SPIMI took: ' + str(s_t1 - s_t0)
+    print(message)
+    results += message
+    results += '\n'
+
+    message = 'Naive took: ' + str(n_t1 - n_t0)
+    print(message)
+    results += message
+    results += '\n'
+    
+    message = 'SPIMI is ' + str((n_t1 - n_t0) / (s_t1 - s_t0)) + ' times faster'
+    print(message)
+    results += message
+
+    f = open('results/subproject1.txt', 'w')
+    f.write(results)
+    f.close()
 
     # PART B
     json.dump(SPIMI_index, open('indexes/index_10000.json', "w", encoding="utf−8"), indent=3)

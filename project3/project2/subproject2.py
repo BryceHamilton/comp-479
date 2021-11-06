@@ -135,18 +135,18 @@ def three_query_validation():
 
     # validate each query
     for query in queries:
-        print(f'validating query {query}')
+        print('validating query ' + str(query))
         result = validator(query)
         
         if result is None:
-            print(f'query "{query}" not found in index')
+            print('query "' + str(query) + '" not found in index')
         
         else:
             freq, docs = result
-            print(f'query "{query}" found in {freq} documents:')
+            print('query "' + str(query) + '" found in ' + str(freq) + ' documents:')
             print(docs)
     
-    return f'queries {queries} all validated'
+    return 'queries ' + str(queries) + ' all validated'
 
 
 # -- DRIVER --
@@ -180,7 +180,7 @@ if __name__ == '__main__':
 
         if result:
             freq, doc_ids = result
-            print(f'query found in all {freq} documents')
+            print('query found in all ' + str(freq) + ' documents')
             print(doc_ids)
 
     sys.exit(0)

@@ -1,0 +1,4 @@
+number of tokens in SPIMI index: 2853
+SPIMI took: 0.06224489212036133
+Naive took: 0.10424089431762695
+SPIMI is 1.6746899346545423 times faster

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Project 2 - COMP 479
 Bryce Hamilton 40050171
@@ -48,7 +49,7 @@ def process_files(F, max_pairs):
             current_pairs += 1
             
             if current_pairs == max_pairs:
-                print(f'{max_pairs} processed')
+                print(str(max_pairs) + ' processed')
                 return
 
 # PART 1
@@ -80,7 +81,7 @@ def output_doc_id_term_pairs(doc_stream):
         doc_count += 1
         doc = next(doc_stream, None)
 
-    print(f'{doc_count} documents processed')
+    print(str(doc_count) + ' documents processed')
 
 # PART 2
 def remove_duplicates_and_sort(F):
@@ -99,12 +100,12 @@ def remove_duplicates_and_sort(F):
     print('* REMOVING DUPLICATES FROM F *')
     
     # token count
-    print(f'initial token count: {len(F)}')
+    print('initial token count: ' + str(len(F)))
 
     F = list(set(F))
 
     # unique token count
-    print(f'unique token count: {len(F)}')
+    print('unique token count: ' + str(len(F)))
 
     print('* DONE REMOVING DUPLICATES FROM F *')
 
@@ -139,7 +140,7 @@ def invert(F):
 
     print('* DONE GENERATING INVERTED INDEX FROM F *')
     
-    print(f'number of terms in index: {len(index.keys())}')
+    print('number of terms in index: ' + str(len(index.keys())))
     
     return index
         

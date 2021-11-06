@@ -1,0 +1,30 @@
+COMP 479 - Project 3
+Bryce Hamilton 40050171
+
+Subproject 1
+The approach was to use helpers from the Project 1 and Project 2 to do a lot of the heavy lifting,
+the helpers read the files and split them up into tokens leaving only duplicates to be removed.
+
+Results: 
+
+number of tokens in SPIMI index: 2853
+SPIMI took: 0.06224489212036133
+Naive took: 0.10424089431762695
+SPIMI is 1.6746899346545423 times faster
+
+Observe that SPIMI, direct appending to posting list is faster for creating index
+
+Subproject 2
+
+See Results in '/results/subproject2'
+
+SPIMI and Original Index return the same results for single keyword test query
+
+The only query return by the index is "George Bush", 
+as the other two do not appear together in a single document
+(See the AND processor results)
+
+However, the BM25 Ranked Results are returned
+
+The OR processor returns vastly more results for each query,
+as expected.

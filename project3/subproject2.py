@@ -1,20 +1,26 @@
+# -*- coding: utf-8 -*-
 '''
 Project 3 - COMP 479
 Bryce Hamilton 40050171
 Subproject 2
 
 run from command line: 
+
 first run:
-`python subproject1` to create indexes (only needed once)
+`python subproject2` to create indexes (only needed once)
 See output in '/indexes'
 
 query processing
 run:
-`python subproject1 0` to run 4 test queries
-`python subproject1 1` to input single keyword query
-`python subproject1 2` to input query for BM25 ranked retrieval
-`python subproject1 3` to input query for AND unranked
-`python subproject1 4` to input query for OR unranked
+
+`python subproject2 0` to run 4 test queries
+See output in '/results/subproject2'
+
+`python subproject2 1` to input single keyword query
+`python subproject2 2` to input query for BM25 ranked retrieval
+`python subproject2 3` to input query for AND unranked
+`python subproject2 4` to input query for OR unranked
+See output in command line 
 
 '''
 
@@ -78,7 +84,7 @@ def segment_documents(sgm_file, doc_length_index):
         except:
             doc_no_body_count += 1
     
-    print(f'{doc_no_body_count} documents without body')
+    print(str(doc_no_body_count) + ' documents without body')
 
 
 
@@ -142,7 +148,7 @@ def output_doc_id_term_pairs(doc_stream):
         doc_count += 1
         doc = next(doc_stream, None)
 
-    print(f'{doc_count} documents processed')
+    print(str(doc_count) + ' documents processed')
 
 
 def spimi_with_duplicates():
@@ -241,9 +247,9 @@ def BM25_ranked_search(query):
             else:
                 scores.append((doc_id, idf * (numerator / denominator)))
 
-    results = sorted(scores, key=lambda x: x[1])
+    results = sorted(scores, key=lambda x: x[1], reverse=True)
     
-    return [res[0] for res in results]
+    return results
 
     
 
@@ -281,21 +287,42 @@ def AND_processor(query):
 
 def run_test_queries():
 
+    output = ""
+
     single_keyword = 'apple'
 
     # Part (a)
-    print('RUNNING SINGLE KEYWORD COMPARISON FOR: ' + single_keyword)
+    message = 'RUNNING SINGLE KEYWORD COMPARISON FOR: ' + str(single_keyword)
+    print(message)
+    output += message
+    output += '\n'
 
-    print('SPIMI results')
+
+    message = 'SPIMI results'
+    print(message)
+    output += message
+    output += '\n'
+    
     results = single_term_processor(single_keyword)
     print(results)
+    output += str(results)
+    output += '\n'
 
-    print('original index results')
+    message = 'original index results'
+    print(message)
+    output += message
+    output += '\n'
+
     results = query_processor(single_keyword)
     print(results)
+    output += str(results)
+    output += '\n'
 
     # Part (b)
-    print('RUNNING TEST QUERIES FOR BM25')
+    message = 'RUNNING TEST QUERIES FOR BM25'
+    print(message)
+    output += message
+    output += '\n'
 
     queries = [
         "Democrats’ welfare and healthcare reform policies",
@@ -303,41 +330,80 @@ def run_test_queries():
         "George Bush"
         ]
     
-    print('queries: ')
+    message = 'queries: '
+    
+    print(message)
+    output += message
+    output += '\n'
     
     for query in queries:
         print(query)
+        output += query
+        output += '\n'
+        
         results = BM25_ranked_search(query)
+        
         print(results)
+        output += str(results)
+        output += '\n'
     
     # Part (c)
-    print('RUNNING TEST QUERIES FOR AND UNRANKED')
+    message = 'RUNNING TEST QUERIES FOR AND UNRANKED'
+    print(message)
+    output += message
+    output += '\n'
 
     queries = [
         "Democrats’ welfare and healthcare reform policies",
         "Drug company bankruptcies",
         "George Bush"
         ]
-    print('queries: ')
+
+    message = 'queries: '
+    print(message)
+    output += message
+    output += '\n'
     
     for query in queries:
         print(query)
+        output += query
+        output += '\n'
+
         results = AND_processor(query)
         print(results)
-   
+        output += str(results)
+        output += '\n'
+
     # Part (d)
-    print('RUNNING TEST QUERIES FOR OR UNRANKED')
+    message = 'RUNNING TEST QUERIES FOR OR UNRANKED'
+    print(message)
+    output += message
+    output += '\n'
+
     queries = [
         "Democrats’ welfare and healthcare reform policies",
         "Drug company bankruptcies",
         "George Bush"
         ]
-    print('queries: ')
     
+    message = 'queries: '
+    print(message)
+    output += message
+    output += '\n'
+
     for query in queries:
         print(query)
+        output += query
+        output += '\n'
+
         results = OR_processor(query)
         print(results)
+        output += str(results)
+        output += '\n'
+    
+    f = open('results/subproject2.txt', 'w')
+    f.write(output)
+    f.close()
 
 if __name__ == '__main__':
 
