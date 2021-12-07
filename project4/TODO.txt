@@ -1,0 +1,9 @@
+
+- command line argument for limit
+- run from main
+
+- top 50 highest inverse doc freq per cluster
+
+- print word clouds to file
+
+- check robots.txt 

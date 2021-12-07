@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+	<meta charset="utf-8">
+	<title>Estimate Costs | Hydro-Québec</title>
+	<meta name="description" content="Get an estimate of the cost of electricity for a home you’re thinking of moving into." />
+	<meta name="dc.description" content="Get an estimate of the cost of electricity for a home you’re thinking of moving into." />
+
+	<meta property="fb:app_id" content="1755799354699125" />
+	<meta property="og:title" content="Estimate Costs at Another Address | Hydro-Québec" />
+	<meta property="og:description" content="Tempted by a new apartment or house? Make an informed decision using our consumption estimate tool." />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="https://www.hydroquebec.com/data/metas/fb/res-ec-estimer-couts-residence.jpg" />
+
+	<meta property="og:url" content="https://www.hydroquebec.com/residential/customer-space/moving/estimate-electricity-costs.html" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@hydroquebec" />
+	<meta name="twitter:title" content="Estimate Costs at Another Address | Hydro-Québec" />
+	<meta name="twitter:description" content="Tempted by a new apartment or house? Make an informed decision using our consumption estimate tool." />
+
+	<link rel="canonical" href="https://www.hydroquebec.com/residential/customer-space/moving/estimate-electricity-costs.html" />
+
+	<link rel="alternate" href="https://www.hydroquebec.com/residential/customer-space/moving/estimate-electricity-costs.html" hreflang="en" />
+	<link rel="alternate" href="https://www.hydroquebec.com/residentiel/espace-clients/demenagement/estimer-couts-residence.html" hreflang="fr" />
+
+	<!-- FILES  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,800,800i" rel="stylesheet" type="text/css">
+	<link href="/libs/mmenu/dist/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+
+	<link href="/libs/mmenu/dist/extensions/pagedim/jquery.mmenu.pagedim.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/dist/extensions/pageshadow/jquery.mmenu.pageshadow.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/navbars/jquery.mmenu.navbars.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/setselected/jquery.mmenu.setselected.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/extensions/multiline/jquery.mmenu.multiline.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/screenreader/jquery.mmenu.screenreader.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/keyboardnavigation/jquery.mmenu.keyboardnavigation.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="/static/css2016/hq-styles.min.css">
+	<script src="/static/js2016/gtm-code.min.js"></script>
+	<!-- <script src="/static/js2016/gaq-suivi.min.js"></script> -->
+	<!-- END FILES -->
+
+	<!-- FILES/SCRIPTS LOCAL2 -->
+	<link rel="stylesheet" href="/themes/residentiel/css/residentiel.min.css?v=20170506">
+	
+
+	<style>
+	.hq-bloc-bleu {
+		background-color: #270e79 !important;
+		color: #fff;
+		padding: 20px !important;
+	}
+	.hq-bloc-bleu img {
+		display: block;
+		margin: 0 auto;
+		max-width: 220px;
+		width: 100%;
+	}
+	.button {
+		margin: 15px auto;
+		display: block !important;
+	}
+
+	.button.alt {
+		width: 245px !important;
+		text-align: center;
+	}
+	ul#promo-adress {
+		position: relative;
+		margin: 0 auto !important;
+		padding: 0;
+	}
+	ul#promo-adress li {
+		display: block !important;
+	}
+	#computer-promo {
+		display: none;
+	}
+
+	.demenagement-avis p {
+		padding-right: 16px;
+	}
+
+	
+	.lien-fi > a {
+		text-decoration: none;
+	}
+
+	.lien-fi a:hover, .lien-fi a:focus {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.no-margin {
+		margin-top: 0;
+	}
+	/* CSS POUR LA BOITE HYBDIRE AVIS IMPORTANT/DÉMÉNAGEMENT */
+	#banniere-promo {
+		border: none;
+		margin-top: 0;
+	}
+	#hq-accueil-warning .avis-important {
+		margin-left: 85px;
+		margin-right: 15px;
+	}
+	#hq-accueil-warning p.warning::before {
+		background-image: url(/themes/residentiel/images/avertissement-panne.gif);
+		width: 32px;
+		content: " ";
+		position: absolute;
+		left: 30px;
+		top: 21px;
+		height: 27px;
+	}
+	.res-icn-interrogation {
+		fill: cadetblue;
+		border-radius: 15px;
+		width: 30px;
+		height: 30px;
+		background: #fff;
+		padding: 6px;
+		-webkit-transition: all .25s;
+		-o-transition: all .25s;
+		transition: all .25s;
+	}
+	.res-icn-interrogation:hover {
+		fill: white;
+		background: cadetblue;
+	}
+
+	.hq-bloc-bleu p#large-font {
+		font-size: 1.6em;
+	}
+	.hq-bloc-bleu a.button.demenagement {
+		color: #17649f;
+		border: none;
+		width: 245px;
+		height: 54px;
+		text-align: center;
+		padding: 15px;
+	}
+	.hq-bloc-bleu a.button.demenagement:hover {
+		color: #fff;
+	}
+	.hq-tooltip-container {
+		text-align: center;
+		display: block;
+	}
+	@media screen and (min-width: 768px) {
+		.flex-btn {
+			display: flex;
+			align-items: center;
+		}
+		.button.alt {
+			width: 200px !important;
+			text-align: center;
+		}
+		#computer-promo {
+			display: block;
+			position: relative;
+		}
+		.button {
+			margin: 5px 15px 5px 5px;
+			display: inline-block !important;
+		}
+		.hq-bloc-bleu img {
+			float: right;
+			top: 30px;
+		}
+		.hq-bloc-bleu {
+			padding: 20px 0px 20px 35px !important;
+		}
+		.res-icn-interrogation {
+			transform: translateY(10px);
+		}
+		.hq-tooltip-container {
+			display: inline;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		ul#promo-adress {
+			top: 32px;
+		}
+		ul#promo-adress li {
+			display: inline-block !important;
+		}
+	}
+
+</style>
+
+	<!-- END FILES/SCRIPTS LOCAL -->
+
+</head>
+
+<body class="">
+	<div id="hq-outer-wrapper">
+
+		<!-- TopBar -->
+		<header class="container-fluid" id="hq-main-header">
+	<div class="row hq-nav-desktop">
+		<div class="medium-12 columns">
+			<ul class="ancre-accessibilite">
+				<li><a class="caption" id="skip-to-content" href="#hq-outer-mask">Skip to content</a></li>
+				<li><a class="caption" id="skip-to-footer" href="#hq-main-footer">Skip to the footer's menu</a></li>
+			</ul>
+			<nav class="hq-nav-utils" aria-label="Navigation utilitaire">
+				<ul>
+					<li><a href="https://www.hydroquebec.com/our-sites/">All sites</a></li>
+					<li><a href="https://news.hydroquebec.com/en/">News</a></li>
+					<li><a href="http://www.hydroquebec.com/contact-us/">Contact us</a></li>
+					<li><a href="https://poweroutages.hydroquebec.com/poweroutages/">Power outages</a></li>
+					<li class="hq-langue"><a href="#" lang="fr" hreflang="fr" class="changement-langue">Français</a></li>
+					<li class="hq-connexion"><a href="https://session.hydroquebec.com/portail/en/group/clientele/gerer-mon-compte">
+					<svg focusable="false"><use xlink:href="/images2016/hq-icones.svg#hq-me-connecter"></use></svg>Log-in</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row hq-header-trio-bloc">
+		<div class="small-12 columns">
+			<div class="flex-container">
+				<div class="hq-header-duo-bloc">
+					<div class="hq-logo">
+						<a class="" href="/residential/"><img alt="Hydro-Quebec" src="/images2016/logo-hydro-quebec-couleur.svg"></a>
+					</div>
+					<nav class="hq-nav-grande-section hq-nav-desktop">
+						<ul id="hq-nav-grande-section-ul">
+							<li><a href="/residential/" class="active">Residential</a></li>
+							<li><a href="/business/">Business</a></li>
+							<li><a href="/about/">About Us</a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+				<div class="hq-recherche-bloc hq-nav-desktop">
+					 <form class="hq-header-recherche" action="https://www.hydroquebec.com/search-results/">
+						<input type="text" autocomplete="off" name="search" title="Search" placeholder="Keyword(s)" >
+						<button type="submit">
+						<svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-recherche"></use></svg>
+						<span class="icon icon-search visuallyhidden">Launch search</span></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- NAV grande section -->
+	<div class="hq-nav-section-bloc">
+		<div class="row">
+			<div class="visible-el">
+				<p class="hq-mm-avis hide-for-small-only">
+					<a class="visuallyhidden" href="/sitemap.html">For an alternative version of the menu below, you can access the sitemap.</a>
+				</p>
+			</div>
+			<!-- MOBILE -->
+			<div id="hq-menu-visible-mobile">
+				<ul>
+					<li>
+						<a href="#hq-header-nav-section" class="hamburger hamburger--collapse">
+						  <span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						  </span>
+						  <span class="hq-menu-vl"><span class="visuallyhidden">Display </span>Menu</span>
+						</a>
+					</li>
+					<li class="hq-connexion">
+						<a href="https://session.hydroquebec.com/portail/en/group/clientele/gerer-mon-compte">
+						<span class="hq-menu-vl"><svg><use xlink:href="/images2016/hq-icones.svg#hq-me-connecter"></use></svg></span>
+						<span class="hq-menu-vl">Manage my account</span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+			<!-- /MOBILE -->
+
+			<!-- Menu Résidentiel -->
+			<nav class="hq-nav-section medium-12" aria-label="" id="hq-header-nav-section" >
+				<div class="hq-menu-wrap">
+				<ul class="sm" id="hq-header-nav-section2">
+					<!-- Espace client -->
+					<li class="m1"><a href="/residential/customer-space/"><span>Customer Space</span></a>
+
+	<div class="hq-menu-wrap" id="hq-panneau">
+		<ul class="hq-menu-col">
+			<li class="hq-menu-meconnecter"><a href="https://session.hydroquebec.com/portail/en/group/clientele/gerer-mon-compte">Manage my account</a>
+
+				<div class="hq-menu-wrap mm-menu-no-mobile">
+					<div class="hq-panneau-double hq-panneau-meconnecter margintop-0">
+						<div class="hq-menu-col">
+							<p class="hq-panneau-titre">Take advantage of our online<br>services</p>
+								<ul class="hq-panneau-liste">
+									<li>See your balance, due date and payment history for all your accounts.</li>
+									<li>Report a change of address online.</li>
+									<li>Update your communication preferences.</li>
+									<li>Use our tools to understand your electricity use.</li>
+								</ul>
+								<p>&hellip;and more!</p>
+
+								<ul class="res-liste-btn">
+									<li><a href="https://session.hydroquebec.com/portail/en/group/clientele/gerer-mon-compte">Log&nbsp;in</a></li>
+									<li>
+										<a href="https://profil-client.hydroquebec.com/en/create-profile">Create my Customer Space</a>
+
+										<a href="#" class="hq-tooltip hq-tooltip-icn" data-tooltio-content="medium" data-tooltip-content-id="tip-bandeau-infos" data-tooltip-prefix-class="hq-tooltip">
+								<span class="visuallyhidden">Click to obtain more informations about your customer space</span>
+								<svg class="res-icn-interrogation"><use xlink:href="/images2016/hq-icones.svg#hq-point-interrogation"></use></svg>
+							</a>
+									</li>
+								</ul>
+
+								<div class="hq-tip" id="tip-bandeau-infos">
+									<p>What will you need? <br>Contract holder: Your most recent bill. <br>Proxy holder or account manager: A recent bill of the account you manage.</p>
+								</div>
+						</div>
+					</div>
+				</div>
+
+			</li>
+			<li><a href="/residential/customer-space/account-and-billing/">Account and billing</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/customer-space/account-and-billing/online-billing.html">Online billing</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/billing-payment-history.html">Billing payment history</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/equalized-payments-plan.html">Equalized payments plan</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/multiple-account-search-tool.html">Multiple account search tool</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/account-manager.html">Account manager</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/consent-disclosure-proxy.html">Proxy or consent to disclosure</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/meter-reading.html">Meters and meter-reading</a></li>
+						<li><a href="/residential/customer-space/account-and-billing/understanding-bill/">Understanding your bill</a>
+
+							<div class="hq-menu-wrap mm-menu-no-mobile">
+								<div class="hq-menu-banniere-bloc hq-menu-col image-only">
+									<a href="#">
+									<p class="h3 visuallyhidden">What’s a kilowatthour?</p>
+									<figure>
+										<img src="/themes/residentiel/images/banniere/1-kilowattheure.png" alt="" class="image-adaptative">
+									</figure>
+								</a>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/customer-space/rates/">Rates</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/customer-space/rates/#base-rates">Base rates</a></li>
+						<li><a href="/residential/customer-space/rates/#other-rates">Other rates</a></li>
+						<li><a href="/residential/customer-space/rates/#rate-options">Rate options</a></li>
+						<li><a href="/residential/customer-space/rates/glossary.html">Glossary</a></li>
+						<li><a href="/residential/customer-space/rates/helping-understand-your-electricity-rate.html  ">Helping you understand your electricity rate</a></li>
+						<li><a href="/residential/customer-space/rates/understanding-power-demand.html">Understanding power and power demand</a></li>
+						<li><a href="/residential/customer-space/rates/services-charges.html">Service charges</a></li>
+						<li><a href="/residential/customer-space/rates/deposit-payment-garantee.html">Deposit and payment guarantee</a></li>
+						<li><a href="/residential/customer-space/rates/comparison-electricity-prices.html">Comparison of electricity prices</a></li>
+
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/customer-space/payment/">Payment</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/customer-space/payment/paying-your-bill.html">Paying your bill</a></li>
+						<li><a href="/residential/customer-space/payment/pre-authorized-debit.html">Pre authorized debit</a></li>
+						<li><a href="/residential/customer-space/payment/online-payment.html">Online payment</a></li>
+						
+						<li><a href="/residential/customer-space/payment/payment-difficulties-options.html">Options in case of payment difficulties</a></li>
+						<li><a href="/residential/customer-space/payment/payment-arrangement.html">Enter into a payment arrangement</a></li>
+						<li><a href="/residential/customer-space/payment/confirm-payment.html">Confirm your payment</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/customer-space/electricity-use/">About my electricity use</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/customer-space/electricity-use/my-consumption-profile.html">My consumption profile</a>
+
+							<div class="hq-menu-wrap mm-menu-no-mobile">
+								<div class="hq-menu-banniere-bloc hq-menu-col">
+									<a href="#">
+									<p class="h3">New! Your consumption, by the hour.</p>
+									<figure style="margin-top:85px;">
+										<img alt="" src="/themes/residentiel/images/banniere/portrait-conso-laptop-en.png" class="image-adaptative">
+									</figure>
+								</a>
+								</div>
+							</div>
+
+						</li>
+						<li><a href="/residential/customer-space/electricity-use/dare-to-compare.html">Dare to compare</a></li>
+						<li><a href="/residential/customer-space/electricity-use/home-diagnostic.html">Home diagnostic</a></li>
+						<li><a href="/residential/customer-space/electricity-use/electricity-consumption-factors.html">Factors that  influence consumption</a></li>
+						<li><a href="/residential/customer-space/electricity-use/electricity-consumption-by-use.html">Breakdown of a household’s electricity use</a></li>
+						<li><a href="/residential/customer-space/electricity-use/tools/">Tools to calculate consumption</a></li>
+						<li><a href="/residential/customer-space/electricity-use/electricity-consumption-devices.html">What you may not know about your electric devices</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/customer-space/moving/">Moving</a>
+				<div class="hq-menu-wrap">
+
+					<ul class="hq-menu-col">
+						<li><a href="/residential/customer-space/moving/change-address.html">Change address</a></li>
+						<li><a href="/residential/customer-space/moving/add-address.html">Add address</a></li>
+						<li><a href="/residential/customer-space/moving/remove-address.html">Remove address</a></li>
+						<li><a href="/residential/customer-space/moving/become-a-customer.html">Become a customer</a></li>
+						<li><a href="/residential/customer-space/moving/estimate-electricity-costs.html">Estimate a home’s electricity costs</a></li>
+						<li><a href="/residential/customer-space/moving/successful-move.html">Successful move</a></li>
+						<li><a href="/residential/faq.html#holder">Remove or add a contract holder</a></li>
+						<li><a href="/residential/customer-space/moving/manage-rental-units.html">Manage rental</a></li>
+					</ul>
+				</div>
+
+			</li>
+			<li><a href="/residential/customer-space/request-for-work/">Request for work</a>
+				<!-- <div class="hq-menu-wrap">
+					<ul>
+						<li><a href="/residential/customer-space/request-for-work/track-a-request-for-work.html">Track a request for work</a></li>
+					</ul>
+				</div> -->
+			</li>
+		</ul>
+	</div>
+</li>
+
+
+					<!-- Mieux consommer -->
+					<li><a href="/residential/energy-wise/"><span>Energy Wise</span></a>
+	<div class="hq-menu-wrap hq-panneau">
+		<ul class="hq-menu-col">
+			<li><a href="/residential/energy-wise/windows-heating-air-conditioning/">Windows, heating and air conditioning</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/heating-tips.html">Heating</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/air-conditioning-tips.html">Air-conditioning</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/heat-pumps/">Heat pumps</a></li>		
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/windows.html">ENERGY STAR<sup>&reg;</sup> certified windows</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/electronic-thermostats.html">Electronic thermostats</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/thermal-storage/">Central heating with electric thermal storage</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/geothermal-systems.html">Geothermal systems</a></li>
+						<li><a href="/residential/energy-wise/windows-heating-air-conditioning/how-to-caulk.html">Caulking</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/hot-water/">Hot water</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/hot-water/tips.html">Heating water</a></li>
+						<li><a href="/residential/energy-wise/hot-water/water-heater.html">ECOPEAK<sup>&reg;</sup> water heaters</a></li>
+						<li><a href="/residential/energy-wise/hot-water/energy-saving-products.html">Water- and energy-saving products</a></li>
+						<li><a href="/residential/energy-wise/hot-water/used-water-heat-recovery.html">Drain water heat recovery systems</a></li>
+						<li><a href="/residential/energy-wise/hot-water/how-to-fix-faucet.html">How to repair a leaky faucet</a></li>
+						<li><a href="/residential/energy-wise/hot-water/how-to-check-water-flow.html">How to check water flow rate</a></li>
+						<li><a href="/residential/energy-wise/hot-water/how-to-install-showerhead.html">How to install a showerhead</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/appliances/">Household appliances</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/appliances/tips.html">Household appliances</a></li>
+						<li><a href="/residential/energy-wise/appliances/products.html">ENERGY STAR® certified Household appliances</a></li>
+						<li><a href="/residential/energy-wise/appliances/disable-ice-dispenser.html">How to turn off your fridge’s ice maker</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/electronics/">Electronics</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/electronics/tips.html">Home electronics</a></li>
+						<li><a href="/residential/energy-wise/electronics/phantom-power.html">Standby power consumption</a></li>
+						<li><a href="/residential/energy-wise/electronics/game-consoles.html">Game consoles</a></li>
+						<li><a href="/residential/energy-wise/electronics/electrical-power-bars.html">Smart power bars</a></li>
+						<li><a href="/residential/energy-wise/electronics/tv.html">ENERGY STAR<sup>&reg;</sup> certified TVs</a></li>
+						<li><a href="/residential/energy-wise/electronics/choosing-tv.html">How to choose an energy-efficient TV</a></li>
+						<li><a href="/residential/energy-wise/electronics/computer-standby-functions.html">How to activate a computer’s standby mode</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/lighting/">Lighting</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/lighting/tips.html">Lighting</a></li>
+						<li><a href="/residential/energy-wise/lighting/led.html">LED bulbs</a></li>
+						<li><a href="/residential/energy-wise/lighting/christmas-lights.html">LED holiday lights</a></li>
+						<li><a href="/residential/energy-wise/lighting/choosing-led-bulb.html#!/">How to choose LED bulbs</a></li>
+						<li><a href="/residential/energy-wise/lighting/create-your-mood.html">How to create your mood</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/pools/">Pools and spas</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/pools/tips.html">Pools and spas</a></li>
+						<li><a href="/residential/energy-wise/pools/heat-pumps.html">Pool heat pumps</a></li>
+						<li><a href="/residential/energy-wise/pools/pool-covers.html">Solar pool covers</a></li>
+						<li><a href="/residential/energy-wise/pools/efficient-pumps.html">Efficient pool pumps</a></li>
+						<li><a href="/residential/energy-wise/pools/filter-timers.html">Pool filter timers</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/promotions/" target="_self">Promotional offers</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/promotions/hq.html" target="_self">Hydro-Québec offers</a></li>
+						<li><a href="/residential/energy-wise/promotions/retail.html">Retail promotions</a></li>
+						<li><a href="/residential/energy-wise/promotions/others.html" target="_self">Other offers and tax credits</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/residential/energy-wise/build-renovate/">Building and renovating</a>
+				<div class="hq-menu-wrap">
+					<ul class="hq-menu-col">
+						<li><a href="/residential/energy-wise/build-renovate/isolation.html">Thermal insulation</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</li>
+
+
+					<!-- Conseils de sécurité -->
+					<li><a href="/safety/"><span>Safety advice</span></a></li>
+
+				</ul>
+				</div>
+			</nav>
+		<!-- / Fin menu */	 -->
+		</div>
+	</div>
+</header>
+		<!-- end TopBar -->
+
+		<div id="hq-outer-mask">
+
+			<!-- CONTENU PAGE -->
+			<div class="row" role="main">
+				<div class="columns medium-12">
+					<header class="breadcrumb-bloc">
+						<nav id="hq-breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+						<h1 id="haut">Estimate a home’s electricity costs</h1>
+					</header>
+
+					<!-- Bandeau Promo  -->
+					<div class="row marginbottom-40">
+	<div class="columns medium-12">
+		<div class="hq-bloc-bleu">
+			<div class="row v-centered">
+				<div class="columns medium-9">
+					<h2>Change your address in your Customer Space and save&nbsp;$25.</h2>
+					<div class="row flex-btn">
+						<div> <a class="button alt" href="https://session.hydroquebec.com/portail/en/group/clientele/signaler-un-demenagement">Log in </a>
+						</div>
+						<div> <a class="button demenagement" href="https://profil-client.hydroquebec.com/en/create-profile">Create my Customer Space</a>
+						</div>
+						<div class="marginbottom-10">
+							<span class="hq-tooltip-container">
+							<a href="#" class="hq-tooltip hq-tooltip-icn" data-tooltip-width="medium" data-tooltip-content-id="tip-bandeau-infos-desktop" data-tooltip-prefix-class="hq-tooltip" id="label_tooltip_2">
+								<span class="visuallyhidden">Click for more information on the Customer Space</span>
+							<svg class="res-icn-interrogation">
+								<use xlink:href="/images2016/hq-icones.svg#hq-point-interrogation"></use>
+							</svg>
+							</a>
+							<div class="hq-tip" id="tip-bandeau-infos-desktop">
+								<p>Here’s what you’ll need to change your address:<br />
+									   Contract holder: Your most recent bill.<br />
+									   Proxy holder, authorized person or account manager: A recent bill.</p>
+							</div>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="columns medium-3">
+					<figure>
+						<img alt="" src="/themes/residentiel/images/banniere/HQ-demenagement-carrousel.png">
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+					<!-- Fin Bandeau Promo -->
+
+					<div class="bloc-intro">
+						<p>Tempted by a new apartment or house? Make an informed decision by anticipating electricity&nbsp;costs.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-12">
+					<h2>Quick and easy</h2>
+					<p>Just enter the building number and postal code of the address you’re interested in. If it’s possible to produce an estimate for the address, you’ll have it instantly.</p>
+
+					<a href="https://session.hydroquebec.com/portail/en/web/clientele/estimation-consommation" class="button alt">Estimate the cost</a>
+
+					<div class="hq-bloc-liens">
+						<h2>Other resources for moving</h2>
+						<ul class="liste-liens">
+							<li><a href="https://www.canadapost.ca/cpo/mc/personal/postalcode/fpc.jsf?LOCALE=en">Find postal code</a></li>
+							<li><a href="/residential/customer-space/account-and-billing/meter-reading.html">Submit meter reading</a></li>
+							<li><a href="https://www.adresse.gouv.qc.ca/Inscrire/FormulaireChangementAdresse.aspx?Etape=0">Notify the Service québécois de changement d’adresse</a></li>
+						</ul>
+					</div>
+
+					<div class="hq-bloc-fond">
+						<h2 class="h3">Frequently asked questions</h2>
+						<p>Answers to help you change your address online.</p>
+						<p><a href="/residential/faq.html#moving" class="lien-pointeur">FAQ – Residential customers</a></p>
+					</div>
+
+					<div class="hq-bloc-fond">
+						<h2 class="h3">Tips for a successful move</h2>
+						<p>A successful move takes good planning. We’ve put together some tips to help you.</p>
+						<p><a href="/residential/customer-space/moving/successful-move.html" class="lien-pointeur">Move successfully</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- END CONTENU PAGE -->
+
+			<!-- FOOTER -->
+				<footer class="container-fluid" id="hq-main-footer">
+	<h2 class="visuallyhidden">Important links</h2>
+
+	<div class="row">
+		<div class="columns small-12 medium-3">
+			<img src="/images2016/logo-hydro-quebec-coupe.svg" alt="" class="hq-logo-coupe">
+		</div>
+			<div class="columns small-12 medium-9">
+				<ul class="hq-footer-main-menu hq-footer-main-menu-3-col">
+					<li>
+						<span class="visuallyhidden">Link to main sections</span>
+						<ul class="hq-section-princ">
+							<li><a href="/residential/">Residential</a></li>
+							<li><a href="/business/">Business</a></li>
+						</ul>
+					</li>
+					<li class="hq-break-col">
+						<span class="visuallyhidden">Link to some of our sites</span>
+						<ul class="hq-autres-sites">
+							<li><a href="https://www.hydroquebec.com/about/">About</a></li>
+<li><a href="https://www.hydroquebec.com/residential/energy-wise/">Energy Wise</a></li>
+<li><a href="http://www.hydroquebec.com/electricity-and-you/">Security advice</a></li>
+<li><a href="https://news.hydroquebec.com/en/">Newsroom</a></li>
+<li><a href="http://www.hydroquebec.com/contact-us/">Contact us</a></li>
+<li><a href="https://poweroutages.hydroquebec.com/poweroutages/">Power outages</a></li>
+<li><a href="http://www.hydroquebec.com/emplois/">Jobs*</a></li>
+<li><a href="https://www.hydroquebec.com/our-sites/">Our sites</a></li>
+						</ul>
+					</li>
+					<li class="hq-break-col hq-footer__infolettres">
+						<span><a href="https://www.hydroquebec.com/newsletters/">Newsletters</a></span>
+					</li>
+					<li class="hq-footer-suivez-nous">
+						<span><a href="https://www.hydroquebec.com/a/social-media.html">Follow us</a></span>
+						<ul class="sn-reseaux">
+							<li>
+								<a href="https://www.linkedin.com/company/hydro-quebec" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-linkedin"></use></svg><span class="visuallyhidden">Linkedin</span></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/hydroquebecvideo" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-youtube"></use></svg><span class="visuallyhidden">Youtube</span></a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/hydroquebec1944/" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-facebook"></use></svg><span class="visuallyhidden">Facebook</span></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/hydroquebec/" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-instagram"></use></svg><span class="visuallyhidden">Instagram</span></a>
+							</li>
+							<!--<li><a href="" class="sn-icon"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-rss"></use></svg><span class="visuallyhidden">Flux RSS</span></a></li>-->
+							<li class="sn-twitter">
+								<a href="https://twitter.com/hydroquebec" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-twitter"></use></svg><span class="visuallyhidden">Twitter</span></a>
+								<ul class="sn-twitter-comptes">
+									<li>
+										<a href="https://twitter.com/hydroquebec">@hydroquebec</a> Follow us to learn more about company news.
+									</li>
+									<li>
+										<a href="https://twitter.com/hydro_customer">@hydro_customer</a> Questions about your bill, electricity use or our services?
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="hq-footer-apps">
+						<span><a href="http://www.hydroquebec.com/mobile-app.html">Apps</a></span>
+						<ul>
+							<li>
+								<a href="https://itunes.apple.com/ca/app/hydro-quebec/id1045080947?l=en&mt=8" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-ios"></use></svg><span class="visuallyhidden">Apple Store</span></a>
+							</li>
+							<li>
+								<a href="https://play.google.com/store/apps/details?id=com.hydroquebec.mf_android" class="sn-icone"><svg><use xlink:href="/images2016/hq-icones.svg#hq-icn-android"></use></svg><span class="visuallyhidden">Google Store</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="hq-footer-assistant">	
+						<a href="http://www.hydroquebec.com/voice-assistants.html">Voice Assistants</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns small-12">
+				<ul class="hq-footer-util-menu">
+					<li><a href="/residential/">Home</a></li>
+					<li><a href="http://www.hydroquebec.com/sitemap.html">Site map</a></li>
+					<li><a href="http://www.hydroquebec.com/terms-confidentiality.html">Terms and confidentiality</a></li>
+					<li><a href="http://www.hydroquebec.com/accessibility.html">Accessibility</a></li>
+					<li><a href="http://www.hydroquebec.com/netiquette-en.html">Netiquette</a></li>
+					<li><a href="/documents-data/act-respecting-access/">Access to Information and Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns small-12">
+				<div class="hq-footer-copyright">
+					
+					<p>&copy; Hydro-Québec, 1996-
+						2021. All rights reserved. *&nbsp;Web site in French only</p>
+				</div>
+			</div>
+		</div>
+</footer>
+
+			<!-- END FOOTER -->
+
+		</div>
+	</div>
+
+	<!-- FIL D'ARIANE -->
+	<script type="application/ld+json">
+		{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"item": {
+				"@id": "/residential/",
+				"name": "Residential"
+			}
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"item": {
+				"@id": "/residential/customer-space/",
+				"name": "Customer space"
+			}
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"item": {
+				"@id": "/residential/customer-space/moving/",
+				"name": "Moving"
+			}
+		}
+	]
+}
+
+	</script>
+	<!-- END FIL D'ARIANE -->
+
+	<!-- SCRIPTS GLOBAL -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/js2016/plugins.min.js"></script>
+<script src="/static/js2016/hq-scripts.min.js"></script>
+<!-- Menu -->
+<script src="/static/js2016/jquery.hqmenus.min.js"></script>
+<!-- Mobile menu-->
+<script src="/libs/mmenu/js/min/jquery.mmenu.hq.min.js"></script>
+<script src="/libs/mmenu/addons/navbars/jquery.mmenu.navbars.min.js"></script>
+<script src="/libs/mmenu/addons/setselected/jquery.mmenu.setselected.min.js"></script>
+<script src="/libs/mmenu/addons/backbutton/jquery.mmenu.backbutton.min.js"></script>
+<script src="/libs/mmenu/addons/screenreader/jquery.mmenu.screenreader.min.js"></script>
+<script src="/libs/mmenu/addons/keyboardnavigation/jquery.mmenu.keyboardnavigation.min.js"></script>
+<!-- Other plugins and scripts -->
+<script src="/static/js2016/hq-mmenu-config.min.js"></script>
+
+<script src="/genesyschat/hq-chat.js"></script>
+<script src="/libs/hq-utils/ie-detection.js"></script>
+	<!-- END SCRIPTS GLOBAL -->
+
+	<!-- SCRIPTS LOCAL -->
+	<script src="/static/js2016/redirection-http.min.js"></script>
+
+	<!-- END SCRIPTS LOCAL -->
+
+	<!-- SCRIPTS PAGE -->
+	<!-- END SCRIPTS PAGE -->
+
+</body>
+
+</html>
