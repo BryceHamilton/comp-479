@@ -36,7 +36,7 @@ class ConcordiaSpider(scrapy.Spider):
 
 def main():
     process = CrawlerProcess()
-    process.crawl(ConcordiaSpider, limit=200)
+    process.crawl(ConcordiaSpider, limit=1000)
     process.start() 
 
     # num downloaded docs

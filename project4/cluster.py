@@ -36,8 +36,8 @@ def get_tfidf(docs):
 
     terms = vectorizer.get_feature_names()
 
-    tfidf_df = pd.DataFrame(X[0].T.todense(), index=terms, columns=["TF-IDF"])
-#     idf_df = idf_df.sort_values('TF-IDF', ascending=False)        
+    tfidf_df = pd.DataFrame(X[0].T.todense(), index=terms, columns=["TF-IDF"])    
+    tfidf_df = tfidf_df.rename_axis('term').reset_index()
     
     return tfidf_df
 
@@ -72,10 +72,10 @@ def print_clusters(k, clusters_df):
         with open(f"clusters/{k}/{cluster_num}.txt", 'w') as f:
                 f.write(titles.to_string(index=False))
         
-        # plt.figure()
-        # plt.imshow(wordcloud, interpolation="bilinear")
-        # plt.axis("off")
-        # plt.show()
+        plt.figure()
+        plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        plt.show()
 
 def kmeans_cluster(k, doc_titles, docs):
     clusters_df = cluster(k, doc_titles, docs)
@@ -88,13 +88,10 @@ def main():
 
     tfidf_df = get_tfidf(docs)
     
-    k = 3
-    clusters_df = kmeans_cluster(k, doc_titles, docs)
-    sentiment_analysis(k, clusters_df, tfidf_df)
-    
-#     k = 6
-#     clusters_df = kmeans_cluster(k, doc_titles, docs)
-#     sentiment_analysis(k, clusters_df, tfidf_df)
+    for k in [3, 6]:
+        clusters_df = kmeans_cluster(k, doc_titles, docs)
+        sentiment_analysis(k, clusters_df, tfidf_df)
+
 
 if __name__ == "__main__":
     main()
