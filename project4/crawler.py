@@ -1,11 +1,11 @@
+import os
+import sys
 import scrapy
 from scrapy.crawler import CrawlerProcess
 
 class ConcordiaSpider(scrapy.Spider):
     name = "concordia_spider"
-    start_urls = [
-            "https://www.concordia.ca",
-        ]
+    start_urls = ["https://www.concordia.ca"]
     crawled_urls = dict()
     num_downloaded = 0
 
@@ -34,13 +34,15 @@ class ConcordiaSpider(scrapy.Spider):
                 yield response.follow(url, callback=self.parse)
 
 
-def main():
+def main(limit):
+    print(f"Starting crawler process, limit: {limit}")
     process = CrawlerProcess()
-    process.crawl(ConcordiaSpider, limit=1000)
+    process.crawl(ConcordiaSpider, limit=limit)
     process.start() 
-
-    # num downloaded docs
-    # find docs_html -type f | wc -l
+    
 
 if __name__ == '__main__':
-    main()
+    limit = 300
+    if len(sys.argv) > 1:
+        limit = sys.argv[1]
+    main(limit)

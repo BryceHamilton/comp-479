@@ -1,8 +1,13 @@
 
-- command line argument for limit
-- run from main
-- name cluster, print word clouds to file, print keywords to file 
+clusters
+- name each cluster
+- print word clouds to file, 
+- print keywords to file, with tf-idf
+
 - report
 - demo file
 
 - check robots.txt 
+
+bonus
+- check textrank, spacy

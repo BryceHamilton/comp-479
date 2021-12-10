@@ -1,7 +1,5 @@
 import os
-import matplotlib.pyplot as plt
 import pandas as pd
-from wordcloud import WordCloud
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
@@ -54,28 +52,6 @@ def cluster(k, doc_titles, docs):
 
     return pd.DataFrame(clusters, columns=['doc_title','cluster', 'doc'])
 
-def print_clusters(k, clusters_df):
-    for cluster_num in range(k):
-
-        print('Cluster: {}'.format(cluster_num))
-
-        cluster = clusters_df[clusters_df.cluster == cluster_num]
-        
-        text = cluster["doc"]
-        text = text.str.cat(sep=' ').lower()
-        wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(text)
-                
-        print('Titles')
-        titles = cluster['doc_title']         
-        print(titles.to_string(index=False))
-
-        with open(f"clusters/{k}/{cluster_num}.txt", 'w') as f:
-                f.write(titles.to_string(index=False))
-        
-        plt.figure()
-        plt.imshow(wordcloud, interpolation="bilinear")
-        plt.axis("off")
-        plt.show()
 
 def kmeans_cluster(k, doc_titles, docs):
     clusters_df = cluster(k, doc_titles, docs)
@@ -87,11 +63,11 @@ def main():
     doc_titles, docs = get_text_files(TEXT_DIR)
 
     tfidf_df = get_tfidf(docs)
+    tfidf_df.to_csv("tf_idf.csv")
     
     for k in [3, 6]:
         clusters_df = kmeans_cluster(k, doc_titles, docs)
-        sentiment_analysis(k, clusters_df, tfidf_df)
-
+        clusters_df.to_csv(f"clusters/{k}/clusters_df.csv")
 
 if __name__ == "__main__":
     main()
