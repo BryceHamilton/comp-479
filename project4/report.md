@@ -40,7 +40,7 @@ After reading the text files, a term frequency, inverse document frequency table
 
 The main clustering step involves vectorizing all documents using `TfidfVectorizer` using `english` stop words, followed by employing the `sklearn` `KMeans` module. The initialization used is `k-means++` as it will produce more distinct clusters and a better run time, given the initial centroids are more likely to be an even distance apart. The other hyperparameters are roughly the default of sklearn, and increaseing the the max iterations or total runs did not produce substantial results but took natrually took longer.
 
-The output of each clustering run, `3` and `6` clusters, are saved as `pandas.Dataframes` to their respective subdirectories in the `clusters` directory.
+The output of each clustering run, `3` and `6` clusters, are saved as `pandas.Dataframes` to their respective subdirectories in the `clusters` directory as well as the `titles` of documents of each cluster.
 
 - Resources: https://towardsdatascience.com/clustering-documents-with-python-97314ad6a78d
 
@@ -64,4 +64,10 @@ Aside from the keywords, a `wordcloud` is generated for each cluster. Both the `
 
 ## Sentiment Analysis
 
-Uses `Afinn`
+Finally, after clustering and keywords have been generated, the cluster sets of `k = 3` and `k = 6` are read into the `sentiment_analysis` module. Using `pandas` the documents are grouped by cluster, and a sentintment score for each cluster is calculated by taking the mean average of the sentiment score output of each document in the cluster output by the `Afinn.score` third party library module.
+
+The output of each cluster is saved to the `{cluster_num}_sentiment_score.txt` of each cluster's subdirectory. Generally sentiment scores are higher for concordia related documents that contain positive encouragement and mental health resource links, lower for things like STM customer service, and in the middle for youtube content/admin sites.
+
+## Output
+
+The standard output of a clustering pipeline run is visible in the `demo.txt` file, and the saved output of the clusters is visible in the `/saved_clusters` directory.
