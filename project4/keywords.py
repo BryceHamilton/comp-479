@@ -22,13 +22,15 @@ def print_clusters(k, clusters_df):
         titles = cluster['doc_title']         
         print(titles.to_string(index=False))
 
-        with open(f"clusters/{k}/{cluster_num}.txt", 'w') as f:
+        with open(f"clusters/{k}/{cluster_num}/{cluster_num}_titles.txt", 'w') as f:
                 f.write(titles.to_string(index=False))
         
         plt.figure()
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         plt.show()
+
+        wordcloud.to_file(f"clusters/{k}/{cluster_num}/{cluster_num}_cloud.png")
 
 def cluster_keywords(cluster_doc, tfidf_df):
     cluster_tfidf = tfidf_df[tfidf_df['term'].isin(cluster_doc)]
@@ -39,7 +41,7 @@ def cluster_keywords(cluster_doc, tfidf_df):
 def not_stop(token):
     return token not in stop_words
 
-def find_keywords(df, tfidf_df):
+def find_keywords(k, df, tfidf_df):
 
     cluster_corpus = df.groupby("cluster")["doc"]\
             .apply(' '.join)\
@@ -50,14 +52,21 @@ def find_keywords(df, tfidf_df):
     cluster_corpus["keywords"] = cluster_corpus['doc'].apply(lambda x: cluster_keywords(x, tfidf_df))
 
     for index, cluster in cluster_corpus.iterrows():
-        print(f"cluster {cluster['cluster']}")
+        cluster_num = cluster['cluster']
+        
+        print(f"cluster {cluster_num}")
         print(cluster["keywords"])
+        
+        with open(f"clusters/{k}/{cluster_num}/{cluster_num}_keywords.txt", 'w') as f:
+                for keyword in cluster["keywords"]:
+                        f.write(keyword)
+                        f.write("\n")
 
 def main():
-    tfidf_df = pd.read_csv(f"tfidf_df.csv")
+    tfidf_df = pd.read_csv(f"tf_idf.csv")
     for k in [3, 6]:
         clusters_df = pd.read_csv(f"clusters/{k}/clusters_df.csv")
-        find_keywords(clusters_df, tfidf_df)
+        find_keywords(k, clusters_df, tfidf_df)
         print_clusters(k, clusters_df)
 
 if __name__ == '__main__':

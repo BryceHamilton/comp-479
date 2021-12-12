@@ -9,9 +9,13 @@ class ConcordiaSpider(scrapy.Spider):
     crawled_urls = dict()
     num_downloaded = 0
 
+    custom_settings = {
+      'ROBOTSTXT_OBEY': True,
+    }
+
     
     def parse(self, response):
-        limit = getattr(self, 'limit', None)
+        limit = int(getattr(self, 'limit', None))
         if self.num_downloaded > limit:
             return
         

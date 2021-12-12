@@ -55,7 +55,6 @@ def cluster(k, doc_titles, docs):
 
 def kmeans_cluster(k, doc_titles, docs):
     clusters_df = cluster(k, doc_titles, docs)
-    print_clusters(k, clusters_df)
     return clusters_df
 
 def main():
