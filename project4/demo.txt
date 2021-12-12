@@ -1,12 +1,112 @@
-RUNNING CRAWLER
+RUNNING CRAWLER - LIMIT 100
 
+CRAWLER LOGS OMITTED
 
-SAVED      234 FILES
+SAVED       99 FILES
 
 
 RUNNING EXTRACTOR
 
 
+extracted text from Costs
+extracted text from Cotutelle
+extracted text from Celebrity couples help each other navigate the ultimate gig economy, new Concordia research shows
+extracted text from International student admissions
+extracted text from 15 Concordia disciplines are among the global best
+extracted text from Security & privacy
+extracted text from Phishing emails at Concordia
+extracted text from EHS
+extracted text from Concordia’s Account Management System (CAMS) service interruption: November 23-29 
+extracted text from 2013-14 - Archived Calendars
+extracted text from Sign In
+extracted text from Classroom information and support
+extracted text from Hot work
+extracted text from 2017-18 - Archived Calendars
+extracted text from Academic dates
+extracted text from Birks Student Service Centre
+extracted text from Feedback
+extracted text from Call for applications
+extracted text from Undergraduate Calendar
+extracted text from Resources for researchers
+extracted text from 2015-16 - Archived Calendars
+extracted text from Recreation, sports & fitness
+extracted text from Fees & funding
+extracted text from External prizes & awards
+extracted text from University of the Streets Café
+extracted text from Explore Concordia: research, teaching, learning
+extracted text from Research
+extracted text from Welcome Guide for New Graduate Students
+extracted text from Netname sign in service disruption - Resolved
+extracted text from New students
+extracted text from Courses offered
+extracted text from Advising and supervision
+extracted text from Phone Maintenance: December 10
+extracted text from 2014-15 - Archived Calendars
+extracted text from Academic
+extracted text from News & tips
+extracted text from Newly accepted & current independent students
+extracted text from Services & resources
+extracted text from Incident report
+extracted text from Concordia’s bike sweep returns
+extracted text from Campus Security and Emergency Services
+extracted text from Research Infosource Inc. :: Top 50 List
+extracted text from Concordia’s Undergraduate Research Showcase celebrates 130 stand-out students
+extracted text from Concordia University
+extracted text from Partnership requests
+extracted text from Concordia's Summer Field Schools offer hands-on experiential learning
+extracted text from Academic visitors
+extracted text from Crime prevention
+extracted text from Reporting an IT incident
+extracted text from Public safety alert
+extracted text from Researcher Coronavirus FAQ
+extracted text from Research support
+extracted text from Safety checks
+extracted text from Concordia Mitacs special call for Inbound GRAs
+extracted text from Visiting researchers
+extracted text from Student life
+extracted text from Severe weather response
+extracted text from Jobs on campus
+extracted text from International students
+extracted text from Partnership types
+extracted text from Make a complaint
+extracted text from Budgeting
+extracted text from Mental health
+extracted text from Partnerships
+extracted text from Training calendar
+extracted text from Prevention 
+extracted text from Concordia International
+extracted text from Are you prepared for Campus Safety Awareness Week at Concordia?
+extracted text from Undergraduate
+extracted text from Office of the VP, Research & Graduate Studies
+extracted text from Concordia is once again named best university in North America under 50
+extracted text from Strategic Research Plan
+extracted text from UNITY Go Live Multi-Factor Authentication Sessions
+extracted text from New international students
+extracted text from Regional chapters
+extracted text from ISO events and workshops
+extracted text from International programs for Concordia students
+extracted text from International
+extracted text from Submit your application
+extracted text from Concordia professor volunteers with Academics Without Borders in Manizales, Colombia
+extracted text from New rankings recognize Concordia’s strengths in teaching, research, international outlook and graduate employability
+extracted text from Current opportunities
+extracted text from IT subscriptions
+extracted text from Study across the globe while earning your Concordia degree
+extracted text from Training
+extracted text from Concordia PhD student fast tracks into the Biochemistry program through a Mitacs Globalink fellowship
+extracted text from Faculty
+extracted text from Are you prepared for Campus Safety Awareness Week?
+extracted text from Students from abroad
+extracted text from Security services
+extracted text from Research spotlights
+extracted text from Course registration
+extracted text from Facilities Management
+extracted text from Cancelled classes
+extracted text from Graduate
+extracted text from 2016-17 - Archived Calendars
+extracted text from Academic integrity
+extracted text from IT services
+extracted text from First aid supplies
 
 
 RUNNING CLUSTERING
@@ -17,11 +117,312 @@ RUNNING CLUSTERING
 RUNNING KEYWORDS
 
 
+      Unnamed: 0       term    TF-IDF
+4513        4513   research  0.280097
+1452        1452  concordia  0.170059
+2602        2602   graduate  0.143141
+3752        3752     office  0.104033
+1121        1121     campus  0.103061
+      Unnamed: 0      term    TF-IDF
+4513        4513  research  0.280097
+2602        2602  graduate  0.143141
+778          778       art  0.119437
+5562        5562     visit  0.110883
+3752        3752    office  0.104033
+      Unnamed: 0       term    TF-IDF
+4513        4513   research  0.280097
+2955        2955  institute  0.166814
+2602        2602   graduate  0.143141
+778          778        art  0.119437
+5562        5562      visit  0.110883
+cluster 0
+['research', 'concordia', 'graduate', 'office', 'campus', 'school', 'studies', 'students', 'university', 'student', 'integrity', 'services', 'calendar', 'academic', 'part', 'officer', 'policies', 'programs', 'quick', 'links', 'applied', 'provides', 'schools', 'class', 'support', 'opportunities', 'role', 'continuing', 'media', 'also', 'key', 'next', 'home', 'events', 'health', 'related', 'development', 'responsible', 'address', 'requirements', 'map', 'conduct', 'see', '514', 'course', 'important', 'including', 'us', 'news', 'resources']
+cluster 1
+['research', 'graduate', 'art', 'visit', 'office', 'campus', 'cities', 'studies', 'researchers', 'students', 'university', 'technology', 'international', 'student', 'integrity', 'dedicated', 'services', 'arts', 'centre', 'calendar', 'education', 'academic', 'together', 'part', 'standards', 'critical', 'funding', 'policies', 'programs', 'links', 'provides', 'facility', 'science', 'class', 'schools', 'opportunities', 'support', 'engage', 'unique', 'generation', 'provincial', 'role', 'culture', 'range', 'initiatives', 'media', 'providing', 'certificate', 'hub', 'also']
+cluster 2
+['research', 'institute', 'graduate', 'art', 'visit', 'office', 'campus', 'cities', 'school', 'studies', 'researchers', 'students', 'university', 'technology', 'international', 'student', 'integrity', 'dedicated', 'services', 'calendar', 'centre', 'arts', 'education', 'academic', 'together', 'part', 'standards', 'officer', 'critical', 'funding', 'maximizing', 'policies', 'programs', 'links', 'artificial', '900', 'applied', 'provides', 'facility', 'brings', 'since', 'agencies', 'intelligence', 'science', 'schools', 'class', 'support', 'opportunities', 'unique', 'engage']
+Cluster: 0
+Titles
+                                          Hot work
+                               Public safety alert
+ Are you prepared for Campus Safety Awareness W...
+                                 Training calendar
+                                First aid supplies
+                                   Courses offered
+                                       News & tips
+                                       Prevention 
+                                  Crime prevention
+                                     Safety checks
+                    Concordia’s bike sweep returns
+            Campus Security and Emergency Services
+                                 Security services
+                                          Training
+                          Reporting an IT incident
+                                          Feedback
+                                   Incident report
+                                  Make a complaint
+                           Severe weather response
+ Are you prepared for Campus Safety Awareness W...
+Cluster: 1
+Titles
+                              Concordia University
+           Welcome Guide for New Graduate Students
+                                      Student life
+                                    Jobs on campus
+                                          Research
+                                     Undergraduate
+                           Concordia International
+                              Partnership requests
+     Netname sign in service disruption - Resolved
+                                 Partnership types
+                                      New students
+     International programs for Concordia students
+                                  IT subscriptions
+                          ISO events and workshops
+                             Current opportunities
+                              Visiting researchers
+                                Academic integrity
+                                       IT services
+                                      Partnerships
+                              Services & resources
+                    Phone Maintenance: December 10
+                                               EHS
+                      Birks Student Service Centre
+                           Strategic Research Plan
+                                Security & privacy
+                                         Budgeting
+ Study across the globe while earning your Conc...
+                                    Fees & funding
+                                  Research support
+                          External prizes & awards
+                         Resources for researchers
+ Concordia’s Undergraduate Research Showcase ce...
+                                     Mental health
+                            International students
+ UNITY Go Live Multi-Factor Authentication Sess...
+                      Recreation, sports & fitness
+                          Advising and supervision
+                                     International
+                                           Faculty
+                  International student admissions
+                                          Graduate
+                        New international students
+                              Students from abroad
+                                 Cancelled classes
+                      Phishing emails at Concordia
+Cluster: 2
+Titles
+     Office of the VP, Research & Graduate Studies
+                                             Costs
+                                    Academic dates
+                      2016-17 - Archived Calendars
+                 Classroom information and support
+                    University of the Streets Café
+                                 Regional chapters
+                        Researcher Coronavirus FAQ
+                                           Sign In
+                           Submit your application
+                                         Cotutelle
+                      2014-15 - Archived Calendars
+ Concordia professor volunteers with Academics ...
+ Concordia's Summer Field Schools offer hands-o...
+                      2015-16 - Archived Calendars
+                                          Academic
+ Concordia PhD student fast tracks into the Bio...
+   Explore Concordia: research, teaching, learning
+                      2013-14 - Archived Calendars
+ Concordia’s Account Management System (CAMS) s...
+     Newly accepted & current independent students
+                             Call for applications
+           Research Infosource Inc. :: Top 50 List
+                            Undergraduate Calendar
+ Celebrity couples help each other navigate the...
+                               Research spotlights
+ 15 Concordia disciplines are among the global ...
+ New rankings recognize Concordia’s strengths i...
+                                 Academic visitors
+                               Course registration
+                      2017-18 - Archived Calendars
+    Concordia Mitacs special call for Inbound GRAs
+                             Facilities Management
+ Concordia is once again named best university ...
+      Unnamed: 0       term    TF-IDF
+4513        4513   research  0.280097
+1452        1452  concordia  0.170059
+2602        2602   graduate  0.143141
+5562        5562      visit  0.110883
+3752        3752     office  0.104033
+      Unnamed: 0       term    TF-IDF
+4513        4513   research  0.280097
+2955        2955  institute  0.166814
+2602        2602   graduate  0.143141
+778          778        art  0.119437
+5562        5562      visit  0.110883
+      Unnamed: 0         term    TF-IDF
+4513        4513     research  0.280097
+5562        5562        visit  0.110883
+1121        1121       campus  0.103061
+4516        4516  researchers  0.086037
+5037        5037     students  0.085884
+      Unnamed: 0      term    TF-IDF
+4513        4513  research  0.280097
+2602        2602  graduate  0.143141
+778          778       art  0.119437
+5562        5562     visit  0.110883
+3752        3752    office  0.104033
+      Unnamed: 0      term    TF-IDF
+4513        4513  research  0.280097
+2602        2602  graduate  0.143141
+3752        3752    office  0.104033
+1121        1121    campus  0.103061
+4688        4688    school  0.098314
+      Unnamed: 0      term    TF-IDF
+4513        4513  research  0.280097
+2602        2602  graduate  0.143141
+5562        5562     visit  0.110883
+1121        1121    campus  0.103061
+1294        1294    cities  0.098936
+cluster 0
+['research', 'concordia', 'graduate', 'visit', 'office', 'campus', 'cities', 'school', 'studies', 'researchers', 'students', 'university', 'international', 'student', 'integrity', 'calendar', 'services', 'education', 'academic', 'part', 'officer', 'standards', 'critical', 'funding', 'programs', 'links', 'quick', 'applied', 'provides', 'agencies', 'science', 'schools', 'class', 'opportunities', 'support', 'engage', 'unique', 'generation', 'federal', 'role', 'continuing', 'culture', 'initiatives', 'range', 'hub', 'also', 'key', 'next', 'home', 'events']
+cluster 1
+['research', 'institute', 'graduate', 'art', 'visit', 'campus', 'cities', 'school', 'studies', 'researchers', 'students', 'university', 'technology', 'international', 'student', 'integrity', 'dedicated', 'calendar', 'services', 'centre', 'arts', 'education', 'academic', 'together', 'part', 'officer', 'standards', 'critical', 'funding', 'maximizing', 'policies', 'programs', 'links', 'artificial', '900', 'applied', 'provides', 'brings', 'since', 'facility', 'agencies', 'intelligence', 'schools', 'science', 'class', 'support', 'opportunities', 'engage', 'unique', 'generation']
+cluster 2
+['research', 'visit', 'campus', 'researchers', 'students', 'technology', 'student', 'integrity', 'services', 'academic', 'links', 'provides', 'class', 'opportunities', 'support', 'media', 'providing', 'hub', 'also', 'key', 'next', 'events', 'health', 'related', 'responsible', 'address', 'map', 'conduct', 'important', 'including', 'us', 'news', 'resources', 'new', 'administrators', 'ext', 'staff', 'machine', 'life', 'faculty', 'latest', 'registration', 'dates', 'schedules', 'cancellations', 'contact', 'service', 'computer', 'highest', 'integrated']
+cluster 3
+['research', 'graduate', 'art', 'visit', 'office', 'campus', 'school', 'studies', 'researchers', 'students', 'university', 'international', 'student', 'integrity', 'dedicated', 'centre', 'calendar', 'services', 'academic', 'together', 'part', 'officer', 'standards', 'critical', 'funding', 'programs', 'links', 'provides', 'class', 'support', 'opportunities', 'engage', 'federal', 'culture', 'initiatives', 'range', 'media', 'providing', 'hub', 'also', 'key', 'next', 'home', 'events', 'health', 'undergraduate', 'related', 'development', 'address', 'admissions']
+cluster 4
+['research', 'graduate', 'office', 'campus', 'school', 'students', 'university', 'student', 'integrity', 'services', 'calendar', 'academic', 'officer', 'policies', 'programs', 'links', 'class', 'opportunities', 'support', 'media', 'also', 'key', 'next', 'home', 'events', 'health', 'related', 'development', 'responsible', 'address', 'requirements', 'map', 'see', '514', 'course', 'important', 'including', 'resources', 'us', 'news', 'new', 'community', 'ext', 'staff', 'de', 'mandate', 'detail', 'life', 'stop', 'schedules']
+cluster 5
+['research', 'graduate', 'visit', 'campus', 'cities', 'studies', 'researchers', 'students', 'university', 'technology', 'international', 'student', 'integrity', 'calendar', 'centre', 'services', 'education', 'academic', 'together', 'part', 'officer', 'standards', 'critical', 'funding', 'policies', 'programs', 'links', 'applied', 'provides', 'agencies', 'brings', 'class', 'opportunities', 'support', 'provincial', 'federal', 'continuing', 'culture', 'range', 'providing', 'certificate', 'hub', 'also', 'key', 'next', 'home', 'events', 'health', 'undergraduate', 'related']
+Cluster: 0
+Titles
+                                          Hot work
+                                             Costs
+ Are you prepared for Campus Safety Awareness W...
+                    University of the Streets Café
+                                   Courses offered
+   Explore Concordia: research, teaching, learning
+                             Call for applications
+           Research Infosource Inc. :: Top 50 List
+                           Severe weather response
+ New rankings recognize Concordia’s strengths i...
+    Concordia Mitacs special call for Inbound GRAs
+ Are you prepared for Campus Safety Awareness W...
+ Concordia is once again named best university ...
+Cluster: 1
+Titles
+     Office of the VP, Research & Graduate Studies
+                              Concordia University
+                      2016-17 - Archived Calendars
+                                          Research
+                           Concordia International
+                              Partnership requests
+                                 Partnership types
+                             Current opportunities
+                              Visiting researchers
+                           Submit your application
+                                      Partnerships
+                                               EHS
+                      2014-15 - Archived Calendars
+                           Strategic Research Plan
+ Study across the globe while earning your Conc...
+ Concordia professor volunteers with Academics ...
+ Concordia's Summer Field Schools offer hands-o...
+                      2015-16 - Archived Calendars
+ Concordia PhD student fast tracks into the Bio...
+                          External prizes & awards
+                         Resources for researchers
+ Concordia’s Undergraduate Research Showcase ce...
+                      2013-14 - Archived Calendars
+                      Recreation, sports & fitness
+                                     International
+                                           Faculty
+                  International student admissions
+                            Undergraduate Calendar
+ Celebrity couples help each other navigate the...
+                               Research spotlights
+ 15 Concordia disciplines are among the global ...
+                              Students from abroad
+                      2017-18 - Archived Calendars
+                             Facilities Management
+Cluster: 2
+Titles
+     Netname sign in service disruption - Resolved
+                 Classroom information and support
+                                  IT subscriptions
+                                Academic integrity
+                                       IT services
+                    Phone Maintenance: December 10
+                                  Research support
+ UNITY Go Live Multi-Factor Authentication Sess...
+                                 Cancelled classes
+                      Phishing emails at Concordia
+Cluster: 3
+Titles
+           Welcome Guide for New Graduate Students
+                                      Student life
+                                    Jobs on campus
+                                     Undergraduate
+                                 Regional chapters
+                                      New students
+     International programs for Concordia students
+                          ISO events and workshops
+                              Services & resources
+                      Birks Student Service Centre
+                                         Cotutelle
+                                Security & privacy
+                                         Budgeting
+                                    Fees & funding
+                                          Academic
+                                     Mental health
+                            International students
+ Concordia’s Account Management System (CAMS) s...
+                          Advising and supervision
+                                          Graduate
+                        New international students
+Cluster: 4
+Titles
+                    Public safety alert
+                      Training calendar
+                     First aid supplies
+                            News & tips
+                            Prevention 
+                       Crime prevention
+                          Safety checks
+         Concordia’s bike sweep returns
+ Campus Security and Emergency Services
+                      Security services
+                               Training
+               Reporting an IT incident
+                               Feedback
+                        Incident report
+                       Make a complaint
+Cluster: 5
+Titles
+                                Academic dates
+                    Researcher Coronavirus FAQ
+                                       Sign In
+ Newly accepted & current independent students
+                             Academic visitors
+                           Course registration
 
 
 RUNNING SENTIMENT ANALYSIS
 
 
+cluster
+0    -0.850000
+1    62.488889
+2    84.794118
+Name: sentiment_score, dtype: float64
+cluster
+0    49.538462
+1    81.647059
+2    51.900000
+3    61.476190
+4     4.466667
+5    63.500000
+Name: sentiment_score, dtype: float64
 
 
 DONE

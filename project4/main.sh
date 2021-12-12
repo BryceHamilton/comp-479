@@ -6,7 +6,10 @@
 mkdir "docs_html"
 mkdir "docs_txt"
 
-echo "RUNNING CRAWLER" > "demo.txt"
+echo "RUNNING CRAWLER - LIMIT $1" > "demo.txt"
+echo -e "\n" >> "demo.txt"
+
+echo "CRAWLER LOGS OMITTED" >> "demo.txt"
 echo -e "\n" >> "demo.txt"
 
 python3 crawler.py $1
