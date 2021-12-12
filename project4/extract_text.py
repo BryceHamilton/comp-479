@@ -27,6 +27,7 @@ def main():
         
         doc_text = soup.get_text().replace('\n', ' ').strip()
         doc_text = re.sub(' +', ' ', doc_text)
+        doc_text = doc_text.lower()
 
         file_name = f"{doc_title}.txt"
         file_path = os.path.join(TEXT_DR, file_name)

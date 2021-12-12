@@ -46,7 +46,7 @@ def main(limit):
     
 
 if __name__ == '__main__':
-    limit = 300
+    limit = 100
     if len(sys.argv) > 1:
         limit = sys.argv[1]
     main(limit)

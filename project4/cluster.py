@@ -3,8 +3,6 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
-from sentiment_analysis import sentiment_analysis
-
 def get_text_files(dir):
 
     text_file_paths = [(file_name, os.path.join(dir, file_name)) for file_name in os.listdir(dir)]
